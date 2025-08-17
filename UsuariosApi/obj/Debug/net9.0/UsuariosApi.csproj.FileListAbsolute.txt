@@ -31,3 +31,8 @@
 /Users/gui/GitHub/divertimentos/curso-dotnet-identity-alura/UsuariosApi/obj/Debug/net9.0/UsuariosApi.pdb
 /Users/gui/GitHub/divertimentos/curso-dotnet-identity-alura/UsuariosApi/obj/Debug/net9.0/UsuariosApi.genruntimeconfig.cache
 /Users/gui/GitHub/divertimentos/curso-dotnet-identity-alura/UsuariosApi/obj/Debug/net9.0/ref/UsuariosApi.dll
+/Users/gui/GitHub/divertimentos/curso-dotnet-identity-alura/UsuariosApi/bin/Debug/net9.0/AutoMapper.dll
+/Users/gui/GitHub/divertimentos/curso-dotnet-identity-alura/UsuariosApi/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/gui/GitHub/divertimentos/curso-dotnet-identity-alura/UsuariosApi/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/gui/GitHub/divertimentos/curso-dotnet-identity-alura/UsuariosApi/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/gui/GitHub/divertimentos/curso-dotnet-identity-alura/UsuariosApi/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
