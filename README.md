@@ -1,1 +1,0 @@
-/Users/gui/GitHub/divertimentos/curso-dotnet-alura/README.md
