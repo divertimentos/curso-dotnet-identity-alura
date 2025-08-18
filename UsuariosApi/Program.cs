@@ -19,6 +19,9 @@ builder.Services
     .AddEntityFrameworkStores<UsuarioDbContext>()
     .AddDefaultTokenProviders();
 
+// Configures Automapper (the newest version, with the latest syntax)
+builder.Services.AddAutoMapper(cfg => { }, typeof(Program).Assembly);
+
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
