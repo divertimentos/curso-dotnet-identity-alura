@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UsuariosApi.Data;
 using UsuariosApi.Models;
+using UsuariosApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,10 @@ builder.Services
 
 // Configures Automapper (the newest version, with the latest syntax)
 builder.Services.AddAutoMapper(cfg => { }, typeof(Program).Assembly);
+
+// Configs de injeção de dependência / instanciação para cada service usada nas controllers.
+builder.Services.AddScoped<CadastroService>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
