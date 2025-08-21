@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using UsuariosApi.Authorization;
 using UsuariosApi.Data;
 using UsuariosApi.Models;
 using UsuariosApi.Services;
@@ -22,6 +23,12 @@ builder.Services
 
 // Configures Automapper (the newest version, with the latest syntax)
 builder.Services.AddAutoMapper(cfg => { }, typeof(Program).Assembly);
+
+// Access Policy
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("IdadeMinima", policy => { policy.AddRequirements(new IdadeMinima(18)); });
+});
 
 // Configs de injeção de dependência / instanciação para cada service usada nas controllers.
 builder.Services.AddScoped<UsuarioService>();
