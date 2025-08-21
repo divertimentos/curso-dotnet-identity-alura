@@ -34,15 +34,9 @@ public class UsuarioService
         }
     }
 
-    public async Task Login(LoginUsuarioDto dto)
+    public async Task<string> Login(LoginUsuarioDto dto)
     {
-        var result = await _signInManager
-            .PasswordSignInAsync(
-                dto.Username,
-                dto.Password,
-                false,
-                false
-            );
+        var result = await _signInManager.PasswordSignInAsync(dto.Username, dto.Password, false, false);
 
         if (!result.Succeeded)
         {
@@ -53,6 +47,8 @@ public class UsuarioService
             _signInManager.UserManager.Users.FirstOrDefault(user => user.NormalizedUserName == dto.Username.ToUpper());
 
 
-        _tokenService.GenerateToken(usuario);
+        var token = _tokenService.GenerateToken(usuario);
+
+        return token;
     }
 }

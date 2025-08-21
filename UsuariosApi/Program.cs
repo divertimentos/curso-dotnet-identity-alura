@@ -25,6 +25,7 @@ builder.Services.AddAutoMapper(cfg => { }, typeof(Program).Assembly);
 
 // Configs de injeção de dependência / instanciação para cada service usada nas controllers.
 builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<TokenService>();
 
 
 builder.Services.AddControllers();
