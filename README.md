@@ -21,3 +21,7 @@ Dentro de um **Cinema A**, precisamos de uma informação que conecte um endere�
 # To Do List
 
 - [ ] Translate all code to English. Alura's course professor wrote all code in Portuguese for accessibility reasons, but that doesn't make any sense to me.
+
+# User-Secrets
+
+`~/.microsoft/usersecrets`
