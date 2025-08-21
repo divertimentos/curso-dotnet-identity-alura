@@ -15,6 +15,7 @@ public class TokenService
             new Claim("username", usuario.UserName),
             new Claim("id", usuario.Id),
             new Claim(ClaimTypes.DateOfBirth, usuario.DataNascimento.ToString()),
+            new Claim("loginTimestamp", DateTime.UtcNow.ToString())
         };
 
         var chave = new SymmetricSecurityKey(
@@ -25,8 +26,7 @@ public class TokenService
         var token = new JwtSecurityToken(
             expires: DateTime.Now.AddMinutes(10),
             claims: claims,
-            signingCredentials: signingCredentials
-        );
+            signingCredentials: signingCredentials);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
